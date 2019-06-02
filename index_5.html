@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>index-5</title>
+    <style type="text/css">
+      body {
+        background: #6699ff;
+      }
+      #id-1 {
+        text-align: center;
+      }
+      .myframe {
+        margin: auto;
+        display: block;
+      }
+      h2{
+        text-align: center;
+        text-decoration: underline;
+        color: #000000;
+      }
+      #form {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function changeSiteInFrame() {
+        var text = document.getElementById("text");
+        var frame = document.getElementById("frame");
+        frame.setAttribute("src", text.value);
+      }
+      function changeDimensions() {
+        var width = document.getElementById("width").value;
+        var height = document.getElementById("height").value;
+        var frame = document.getElementById("frame");
+        frame.setAttribute("width", width);
+        frame.setAttribute("height", height);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>My First Subwindow</h2>
+    <iframe
+      src="https://www.wikipedia.org"
+      class="frame"
+      id="frame"
+      height="600px"
+      width="900px"
+    ></iframe>
+    <form id="form">
+      <input type="text" id="text" placeholder="Enter URL" value="" />
+      <button id="btn-1" onclick="changeSiteInFrame()" type="button">GO!</button>
+    </form>
+    <form id="id-1">
+      <input
+        type="text"
+        id="height"
+        placeholder="Enter Height in px"
+        value=""
+      />
+      <input
+        type="text"
+        id="width"
+        placeholder="Enter Width in px"
+        value=""
+      />
+      <button type="button" onclick="changeDimensions()" id="btn-2">Set</button>
+    </form>
+  </body>
+</html>

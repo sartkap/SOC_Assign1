@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>index-3</title>
+    <style type="text/css">
+      body {
+        background: #6699ff;
+      }
+      .myframe {
+        height: 70%;
+        width: 50%;
+        margin: auto;
+        display: block;
+      }
+      h2,
+      h3 {
+        text-align: center;
+        text-decoration: underline;
+        color: #000000;
+      }
+      .website-list {
+        text-align: center;
+        margin: auto;
+        display: block;
+        list-style-type: none;
+      }
+      li {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function changeSiteInFrame(website) {
+        var frame = document.getElementById("frame");
+        frame.setAttribute("src", website);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>My First Subwindow</h2>
+    <iframe src="https://www.wikipedia.org" class="myframe" id="frame"></iframe>
+    <h3>List of websites to choose from:</h3>
+    <ul class="website-list">
+      <li>
+        <button onclick="changeSiteInFrame('https://www.bing.com/')">Bing</button>
+      </li>
+      <li>
+        <button onclick="changeSiteInFrame('https://www.wikipedia.org')">
+          Wikipedia
+        </button>
+      </li>
+    </ul>
+  </body>
+</html>
