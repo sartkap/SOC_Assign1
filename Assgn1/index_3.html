@@ -1,35 +1,39 @@
 <html>
   <head>
-    <title>index-3</title>
+    <title>Assignment1</title>
     <style type="text/css">
       body {
         background: #6699ff;
       }
-      .myframe {
+
+      .frame {
         height: 70%;
         width: 50%;
         margin: auto;
         display: block;
       }
+
       h2,
       h3 {
         text-align: center;
         text-decoration: underline;
         color: #000000;
       }
-      .website-list {
+
+      .list {
         text-align: center;
         margin: auto;
         display: block;
         list-style-type: none;
       }
+
       li {
         text-align: center;
       }
     </style>
     <script>
-      function changeSiteInFrame(website) {
-        var frame = document.getElementById("frame");
+      function changeSite(website) {
+        var frame = document.getElementById("frame1");
         frame.setAttribute("src", website);
       }
     </script>
@@ -37,15 +41,20 @@
 
   <body>
     <h2>My First Subwindow</h2>
-    <iframe src="https://www.wikipedia.org" class="myframe" id="frame"></iframe>
+    <iframe src="https://www.wikipedia.org" class="frame" id="frame1"></iframe>
     <h3>List of websites to choose from:</h3>
-    <ul class="website-list">
+    <ul class="list">
       <li>
-        <button onclick="changeSiteInFrame('https://www.bing.com/')">Bing</button>
+        <button onclick="changeSite('https://www.wikipedia.org')">
+          Wikipedia
+        </button>
       </li>
       <li>
-        <button onclick="changeSiteInFrame('https://www.wikipedia.org')">
-          Wikipedia
+        <button onclick="changeSite('https://www.bing.com/')">Bing</button>
+      </li>
+      <li>
+        <button onclick="changeSite('https://www.thesaurus.com/')">
+          Thesaurus
         </button>
       </li>
     </ul>
