@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background: #e6e6e6;
+    text-align: center;
+}
+
+.slidercontainer {
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+    overflow-x: hidden;
+}
+
+.images {
+    width: 5400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.images img {
+    float: left;
+    width: 900px;
+}
+
+
+.arrow {
+    color: rgb(214, 209, 209);
+    float: right;
+    margin-top: 280px;
+    transform: scale(5);
+}
+
+.arrow:hover {
+    transform: scale(6);
+}
+
+.arrow-left {
+    margin-left: 50px;
+    float: left;
+}
+
+.arrow-right {
+    margin-right: 50px;
+    float: right;
+}
+
+#imgs {
+    transition: transform 0.7s ease-in-out;
+}
